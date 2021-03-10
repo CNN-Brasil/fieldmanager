@@ -110,11 +110,19 @@ abstract class Fieldmanager_Context_Storable extends Fieldmanager_Context {
 			foreach ( $field->children as $child ) {
 				if ( isset( $data[ $child->name ] ) ) {
 					$this->save_walk_children( $child, $data[ $child->name ] );
+				} else {
+					/*
+					 * Use an empty string for parity with the fallback in
+					 * `\Fieldmanager_Context_Storable::save()`. Do not pass
+					 * NULL: It causes `\Fieldmanager_Context::prepare_data()`
+					 * to read from `$_POST[ $child->name ]`, which might
+					 * contain data for a different top-level field.
+					 */
+					$this->save_walk_children( $child, '' );
 				}
 			}
 		}
 	}
-
 
 	/**
 	 * Handle loading data for any context.
