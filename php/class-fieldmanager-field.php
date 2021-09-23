@@ -603,7 +603,9 @@ abstract class Fieldmanager_Field {
 			} else {
 				$value = isset( $values[ $i ] ) ? $values[ $i ] : null;
 			}
-			$out .= $this->single_element_markup( $value );
+			if (1 === $this->limit || !empty($value)) {
+				$out .= $this->single_element_markup($value);
+			}
 		}
 		if ( ( 0 == $this->limit || ( $this->limit > 1 && $this->limit > $this->minimum_count ) ) && 'bottom' == $this->add_more_position ) {
 			$out .= $this->add_another();
