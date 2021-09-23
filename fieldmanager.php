@@ -7,12 +7,11 @@
  */
 
 /*
-Plugin Name: Fieldmanager
-Plugin URI: https://github.com/alleyinteractive/wordpress-fieldmanager
-Description: Add fields to WordPress programatically.
-Author: Alley
+Plugin Name: CNN Fieldmanager
+Plugin URI: https://github.com/CNN-Brasil/fieldmanager
+Description: Fork of the original WordPress Fieldmanager
+Author: CNN Brasil
 Version: 1.3.0
-Author URI: https://www.alley.co/
 */
 
 /**
