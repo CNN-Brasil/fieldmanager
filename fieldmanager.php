@@ -636,3 +636,7 @@ class FM_Developer_Exception extends Exception { }
  * @package Fieldmanager
  */
 class FM_Validation_Exception extends Exception { }
+
+
+
+require_once plugin_dir_path(__FILE__) . '/fieldmanager-revisions/fieldmanager-revisions.php';
